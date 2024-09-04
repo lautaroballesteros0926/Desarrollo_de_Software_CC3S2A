@@ -9,14 +9,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+
       - name: Install dependencies
         run: npm install
+        working-directory: devops-practice . 
+
+      - name: Build Docker image 
+        run: docker buil -t devops-pracice
+
       - name: Run tests
         run: npm test
+        working-directory: devops-practice  
+      
+      - name: Run Docker container 
+        run: docker run -d -p 3000:3000 devops-practice 
