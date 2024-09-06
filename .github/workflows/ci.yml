@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./devops-practice_Actividad1
+        working-directory: ./devops-practice_actividad1
 
     steps:
     - name: Checkout code
@@ -26,15 +26,15 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./devops-practice_Actividad1
+      working-directory: ./devops-practice_actividad1
     
     - name: Build Docker image
       run: docker build -t devops-practice .
-      working-directory: ./devops-practice_Actividad1
+      working-directory: ./devops-practice_actividad1
 
     - name: Run tests
       run: npm test
-      working-directory: ./devops-practice_Actividad1
+      working-directory: ./devops-practice_actividad1
     
     - name: Run Docker container
       run: docker run -d -p 3000:3000 devops-practice_actividad1
