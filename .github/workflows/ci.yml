@@ -37,4 +37,4 @@ jobs:
       working-directory: ./devops-practice_Actividad1
     
     - name: Run Docker container
-      run: docker run -d -p 3000:3000 devops-practice_Actividad1
+      run: docker run -d -p 3000:3000 devops-practice_actividad1
