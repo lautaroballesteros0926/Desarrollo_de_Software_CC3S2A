@@ -1,1 +1,4 @@
-README\n\nWerlcome to the proyect
+README
+
+
+Welcome to the proyect
