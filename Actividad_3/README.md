@@ -47,7 +47,7 @@ Ahora veremos nuesto historial de cambios con el comando `git log`. Salida:
 
 - git log -oneline: Muestra una salida resumida, bastante util para revisar el historial de manera rapida. 
 
-![Mi Imagen](Imagenes/imagen8.png)
+![Mi Imagen](Imagenes/imagen8..png)
 
 - git log --graph: Visaulizamos el historial de branches (ramas), en un diseño grafico. Obs: Como este repositorio tiene muchas actividad es normal que tenga commits con anterioridad. 
 
