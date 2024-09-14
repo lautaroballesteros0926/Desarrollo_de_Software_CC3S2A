@@ -6,23 +6,23 @@ de historial, y gestión de branches.
 
 ## Git confing 
 Debido a que ya tenemos las configuraciones hechas junton con el correo que me corresponde, y mi user name. Mostraremos el resultado de `git config --list` 
-![Mi Imagen](Imagen1.png)
+![Mi Imagen](Imagenes/Imagen1.png)
 
 ## Git init: Donde comienza tu viaje de codigo 
 
 Debido a que ya tenemos el directorio .git/ creado, crearemos una subcarpeta donde realizaremos toda la Actividad 3. Procedemos a ello 
 
-![Mi Imagen](Imagen2.png)
+![Mi Imagen](Imagenes/Imagen2.png)
 
 ## Git add: Preparando tu codigo 
 
 Creamos un archivo README.md a traves del comando `echo "README" > README.md` y realizamos el comando `git status`
 
-![Mi Imagen](Imagen3.png)
+![Mi Imagen](Imagenes/Imagen3.png)
 
 Como se observa en la imagen git detecta archivos no rastreados, es por eso nos alerta y nos dice agregarlo con git add. 
 
-![Mi Imagen](Imagen4.png)
+![Mi Imagen](Imagenes/Imagen4.png)
 
 Agregamos el archivo al area de staged. Estamos listo para ya hacer nuestro primer commit 
 
@@ -30,32 +30,32 @@ Agregamos el archivo al area de staged. Estamos listo para ya hacer nuestro prim
 
 Una vez pasamos nuestro archivo al area de staged estamos listo para hacer un commit. Utilizamos el comando `git commit -m "Mi primer commit"`. 
 
-![Mi Imagen](Imagen5.png)
+![Mi Imagen](Imagenes/Imagen5.png)
 
 Utilicemos el comando `git status`
 
-![Mi Imagen](Imagen6.png)
+![Mi Imagen](Imagenes/Imagen6.png)
 
 Arbol de trabajo limpio, no hay nada de que preocuparnos. 
 
 ## Git log: Recorrer el arbol de commits 
 Ahora veremos nuesto historial de cambios con el comando `git log`. Salida: 
 
-![Mi Imagen](Imagen7.png)  
+![Mi Imagen](Imagenes/Imagen7.png)  
 
 ### Revisaremos alguna de las opciones que tenemos para `git log`
 
 - git log -oneline: Muestra una salida resumida, bastante util para revisar el historial de manera rapida. 
 
-![Mi Imagen](Imagen8.png)
+![Mi Imagen](Imagenes/Imagen8.png)
 
 - git log --graph: Visaulizamos el historial de branches (ramas), en un diseño grafico. Obs: Como este repositorio tiene muchas actividad es normal que tenga commits con anterioridad. 
 
-![Mi Imagen](Imagen9.png)
+![Mi Imagen](Imagenes/Imagen9.png)
 
 - git log --author='<author>' : Revisar los commit hechoss por un determinado autor especifico 
 
-![Mi Imagen](Imagen10.png)
+![Mi Imagen](Imagenes/Imagen10.png)
 
 ### Pregunta: ¿ Cual es la salida de este comando?  
 
@@ -63,7 +63,7 @@ La pregunta es la siguiente: `git log --graph --pretty=format:'%x09 %h %ar ("%an
 
 Su respectiva salida : 
 
-![Mi Imagen](Imagen11.png)
+![Mi Imagen](Imagenes/Imagen11.png)
 
 La pregunta que es lo que busca este comando, procemos a explicarlo: 
 
@@ -76,25 +76,25 @@ La pregunta que es lo que busca este comando, procemos a explicarlo:
     - `%s`: Muestra el mensaje del commit (el mensaje de confirmación).
 ### Intentemos el comando git log en este ejercicio (puedes realizar otra cosa como colocar las cosas en español). Primero, actualiza el archivo README.md y crea un nuevo archivo CONTRIBUTING.md:
 
-![Mi Imagen](Imagen12.png)
+![Mi Imagen](Imagenes/Imagen12.png)
 
 Agregando un archivo en python: 
 
-![Mi Imagen](Imagen13.png)
+![Mi Imagen](Imagenes/Imagen13.png)
 
 Utilizanod `git log oneline`: 
 
-![Mi Imagen](Imagen14.png)
+![Mi Imagen](Imagenes/Imagen14.png)
 
 ## Trabajar con branches: La piedra angular de la colaboracion 
 
 Veamos las ramas que tenemos: 
 
-![Mi Imagen](Imagen15.png)
+![Mi Imagen](Imagenes/Imagen15.png)
 
 Crearemos una nueva rama llamada 'feature/new-feature' :
 
-![Mi Imagen](Imagen16.png)
+![Mi Imagen](Imagenes/Imagen16.png)
 
 Las convenciones de nombres de branches son importantes para la comunicación. Un estándar
 comúnmente utilizado es anteponer el nombre de la branch con feature/, bugfix/ o hotfix/, seguido
@@ -110,11 +110,11 @@ Este ultimo nos ofrece crear una rama desde un commit en especifico a traves de 
 
 Procedemos a cambiar de rama (branch) a la branch que creamos en la anterior seccion. Utilizamos en comando `git checkout feature/new-feature`: 
 
-![Mi Imagen](Imagen17.png)
+![Mi Imagen](Imagenes/Imagen17.png)
 
 Este grafico nos ayuda a visualizar donde nos econtramos: 
 
-![Mi Imagen](Imagen18.png)
+![Mi Imagen](Imagenes/Imagen18.png)
 
 Algunos detalles importantes: 
 
@@ -130,12 +130,12 @@ Creamos la rama 'feature/another-new-feature' y nos cambiamos a esta rama. En eq
 
 Para este punto crearemos un commit adicional en nuestra rama 'feature/ new-feature' 
 
-![Mi Imagen](Imagen19.png)
+![Mi Imagen](Imagenes/Imagen19.png)
 
 Modifiquemos el Readme y crearemos un nuevo commit: 
 
-![Mi Imagen](Imagen20.png)
-![Mi Imagen](Imagen21.png)
+![Mi Imagen](Imagenes/Imagen20.png)
+![Mi Imagen](Imagenes/Imagen21.png)
 
 Agreagamos los cambios, y realizamos un commit (recordar que estamos en la rama  'feature/new-feature'). 
 
@@ -143,13 +143,13 @@ Cambiamos a la rama main, y desde ahi realizamos el merge con el comando `git me
 
 Para ver como quedan nuestras ramas despues de fusionarlas utilizamos el comando `git log --graph`, vizualizamos: 
 
-![Mi Imagen](Imagen22.png)
+![Mi Imagen](Imagenes/Imagen22.png)
 
 ## git branch -d: Eliminando una branch 
 
 Para mantener limpio nuestro repositorio procedemos a eliminar esta rama con `git branch -d feature/new-feature`: 
 
-![Mi Imagen](Imagen23.png)
+![Mi Imagen](Imagenes/Imagen23.png)
 
 Preguntas:
  - ¿Cómo te ha ayudado Git a mantener un historial claro y organizado de tus cambios?
