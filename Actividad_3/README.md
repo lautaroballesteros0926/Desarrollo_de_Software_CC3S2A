@@ -4,7 +4,6 @@ Objetivo: : Familiarizarse con los conceptos básicos de Git y realizar operacio
 configuración inicial, creación de repositorios, preparación y confirmación de cambios, visualización
 de historial, y gestión de branches. 
 
-
 ## Git confing 
 Debido a que ya tenemos las configuraciones hechas junton con el correo que me corresponde, y mi user name. Mostraremos el resultado de `git config --list` 
 ![Mi Imagen](Imagen1.png)
