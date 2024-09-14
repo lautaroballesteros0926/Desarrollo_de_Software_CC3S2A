@@ -153,9 +153,14 @@ Para mantener limpio nuestro repositorio procedemos a eliminar esta rama con `gi
 
 Preguntas:
  - ¿Cómo te ha ayudado Git a mantener un historial claro y organizado de tus cambios?
-    
+    Es claro que el control de versiones que ofrece Git es bastante completo, podemos saber quien hizo los cambios,cuando los hizo y donde los hizo. Regresar en el tiempo es su superpoder de Git (volver a commits anteriores), crear nuevas ramas en donde creemos nuevas feature,etc. Es una herramienta diria indispensable que todo desarrollador deberia saber utilizar.  
  - ¿Qué beneficios ves en el uso de branches para desarrollar nuevas características o corregir
 errores?
+    El hecho mismo de no afectar nuestra rama principal nos permite experimentar, sin afectar nuestro trabajo ya hecho en la rama principal es uno de los beneficios más importantes. 
  - Realiza una revisión final del historial de commits para asegurarte de que todos los cambios
+   Relizado. 
 se han registrado correctamente.
  -  Revisa el uso de branches y merges para ver cómo Git maneja múltiples líneas de desarrollo.
+    En secciones anteriores a traves del comando `git log --graph` observamos el uso de branches y merges dentro de git.
+
+
