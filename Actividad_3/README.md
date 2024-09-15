@@ -152,15 +152,93 @@ Para mantener limpio nuestro repositorio procedemos a eliminar esta rama con `gi
 ![Mi Imagen](Imagenes/Imagen23.png)
 
 Preguntas:
- - ¿Cómo te ha ayudado Git a mantener un historial claro y organizado de tus cambios?
-    Es claro que el control de versiones que ofrece Git es bastante completo, podemos saber quien hizo los cambios,cuando los hizo y donde los hizo. Regresar en el tiempo es su superpoder de Git (volver a commits anteriores), crear nuevas ramas en donde creemos nuevas feature,etc. Es una herramienta diria indispensable que todo desarrollador deberia saber utilizar.  
- - ¿Qué beneficios ves en el uso de branches para desarrollar nuevas características o corregir
+- ¿Cómo te ha ayudado Git a mantener un historial claro y organizado de tus cambios?
+
+   Es claro que el control de versiones que ofrece Git es bastante completo, podemos saber quien hizo los cambios,cuando los hizo y donde los hizo. Regresar en el tiempo es su superpoder de Git (volver a commits anteriores), crear nuevas ramas en donde creemos nuevas feature,etc. Es una herramienta diria indispensable que todo desarrollador deberia saber utilizar.  
+
+- ¿Qué beneficios ves en el uso de branches para desarrollar nuevas características o corregir
 errores?
-    El hecho mismo de no afectar nuestra rama principal nos permite experimentar, sin afectar nuestro trabajo ya hecho en la rama principal es uno de los beneficios más importantes. 
- - Realiza una revisión final del historial de commits para asegurarte de que todos los cambios
+    
+   El hecho mismo de no afectar nuestra rama principal nos permite experimentar, sin afectar nuestro trabajo ya hecho en la rama principal es uno de los beneficios más importantes.
+
+- Realiza una revisión final del historial de commits para asegurarte de que todos los cambios se han registrado correctamente.
+
    Relizado. 
-se han registrado correctamente.
- -  Revisa el uso de branches y merges para ver cómo Git maneja múltiples líneas de desarrollo.
-    En secciones anteriores a traves del comando `git log --graph` observamos el uso de branches y merges dentro de git.
+
+-  Revisa el uso de branches y merges para ver cómo Git maneja múltiples líneas de desarrollo.
+
+   En secciones anteriores a traves del comando `git log --graph` observamos el uso de branches y merges dentro de git.
+
+## Ejercicios 
+
+### Ejercicio1: Manejo avanzado de branches y resolución de conflictos
+
+Objetivo: Practicar la creación, fusión y eliminación de ramas, así como la resolución de conflictos que puedan surgir durante la fusión.
+Creamos una nueva rama: 
+![Mi Imagen](Imagenes/Imagen24.png)
+
+Procedemos modificar el archivo main.py, de la siguiente manera: 
+
+![Mi Imagen](Imagenes/Imagen25.png)
+![Mi Imagen](Imagenes/Imagen26.png)
+
+Añadimos y confirmamos los cambios en nuestra nueva rama, y nos cambiamos a la main otra vez : 
+
+![Mi Imagen](Imagenes/Imagen28.png)
+
+Editamos el archivo main.py en la rama main: 
+
+![Mi Imagen](Imagenes/Imagen29.png)
+
+Confirmamos los cambios: 
+
+![Mi Imagen](Imagenes/Imagen30.png)
+
+Ahora si pasamos a la parte de fusion de ramas y resolucion de conflictos: 
+
+![Mi Imagen](Imagenes/Imagen31.png)
+
+Como vemos en la imagen, git nos lanza una alerta de que tenemos un conflicto cuando hacemos el merge, observemos nuestro archivo main.py: 
 
 
+![Mi Imagen](Imagenes/Imagen32.png)
+
+Podemos quedarnos con la parte que corresponde a la main (HEAD), o quedarnos con la rama 'feature/advanced-feature. Tambien podemos combinar ambas opciones pero tenemos que hacerlo manualmente: 
+
+![Mi Imagen](Imagenes/Imagen33.png)
+
+Agreagamos al area de stage y comiteamos: 
+
+![Mi Imagen](Imagenes/Imagen34.png)
+
+Eliminamos la rama fusionada_ 
+
+![Mi Imagen](Imagenes/Imagen35.png)
+
+
+### Ejercicio 2: Exploracion y manipulacion del historial de commits 
+
+Usamos el comando `git log -p` : 
+
+![Mi Imagen](Imagenes/Imagen36.png)
+
+Vemos el historial de commits mucho mas detallado se puede observar que el ultimo corresponde al merge que hicimos en el anterior ejercicio. 
+
+Revertir un commit: 
+Para esta seccion haremos un commit adicional y volveremos a donde estabamos en main.py. Observe: 
+
+![Mi Imagen](Imagenes/Imagen37.png)
+
+Se agrego un print más al README.md. Añadimos y confirmamos los cambios: 
+
+![Mi Imagen](Imagenes/Imagen38.png)
+
+Procedemos a hacer un `git revert HEAD`: 
+
+![Mi Imagen](Imagenes/Imagen39.png)
+![Mi Imagen](Imagenes/Imagen40.png)
+
+Debido a que regresamos a un commit anterior, git nos pide que este regreso tambien sea confirmado a traves de un commit. Asi es como nos queda nuestro archivoo main.py: 
+
+![Mi Imagen](Imagenes/Imagen41.png)
+![Mi Imagen](Imagenes/Imagen42.png)
